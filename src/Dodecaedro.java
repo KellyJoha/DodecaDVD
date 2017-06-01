@@ -20,19 +20,100 @@
  ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
  CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Modificaciones de los IDs Por Kelly Johana Cordoba
+kelly.johana.cordoba@correounivalle.edu.co
 */
+
 
 import TUIO.*;
 
-public class TuioDump implements TuioListener {
-	
+
+public class Dodecaedro implements TuioListener {
+    OpenURL openURL;
+    String URL;
+    	
 	public void addTuioObject(TuioObject tobj) {
-		System.out.println("add obj "+tobj.getSymbolID()+" ("+tobj.getSessionID()+") "+tobj.getX()+" "+tobj.getY()+" "+tobj.getAngle());	
+		System.out.println("add obj "+tobj.getSymbolID()+" ("+tobj.getSessionID()+") "+tobj.getX()+" "+tobj.getY()+" "+tobj.getAngle());
+                
+                if (tobj.getSymbolID()== 0){
+                    //Cancion We Will Rock You - Queen
+                    URL ="https://www.youtube.com/watch?v=-tJYN-eG1zk";
+                    openURL.openURL(URL);
+                  }
+                
+                if (tobj.getSymbolID()== 1){
+                    //Cancion I Was Made For Lovin' You - Kiss
+                    URL ="https://www.youtube.com/watch?v=zlSFmotba2I";
+                    openURL.openURL(URL);
+                  }
+                
+                if (tobj.getSymbolID()== 2){
+                    //Cancion I Want To Break Free - Queen
+                    URL ="https://www.youtube.com/watch?v=f4Mc-NYPHaQ";
+                    openURL.openURL(URL);
+                  }
+                
+                if (tobj.getSymbolID()== 3){
+                    //Cancion Uptown Funk ft. Bruno Mars - Mark Ronson
+                    URL ="https://www.youtube.com/watch?v=OPf0YbXqDm0";
+                    openURL.openURL(URL);
+                  }
+                
+                if (tobj.getSymbolID()== 4){
+                    //Cancion Rudeb -  MAGIC! 
+                    URL ="https://www.youtube.com/watch?v=PIh2xe4jnpk";
+                    openURL.openURL(URL);
+                  }
+                
+                if (tobj.getSymbolID()== 5){
+                    //Cancion Hello - Adele
+                    URL ="https://www.youtube.com/watch?v=YQHsXMglC9A";
+                    openURL.openURL(URL);
+                  }
+                
+                if (tobj.getSymbolID()== 6){
+                    //Cancion Happy - Pharrell Williams
+                    URL ="https://www.youtube.com/watch?v=i0A3-wc0rpw&t=16s";
+                    openURL.openURL(URL);
+                  }
+                
+                if (tobj.getSymbolID()== 7){
+                    //Cancion The Lazy Song - Bruno Mars
+                    URL ="https://www.youtube.com/watch?v=fLexgOxsZu0";
+                    openURL.openURL(URL);
+                  }
+                
+                if (tobj.getSymbolID()== 8){
+                    //Cancion Crazy - Aerosmith
+                    URL ="https://www.youtube.com/watch?v=NMNgbISmF4I";
+                    openURL.openURL(URL);
+                  }
+                
+                if (tobj.getSymbolID()== 9){
+                    //Cancion Rolling in the Deep - Adele
+                    URL ="https://www.youtube.com/watch?v=rYEDA3JcQqw";
+                    openURL.openURL(URL);
+                  }
+                
+                if (tobj.getSymbolID()== 10){
+                    //Cancion Just Give Me A Reason ft. Nate Ruess - Pink
+                    URL ="https://www.youtube.com/watch?v=OpQFFLBMEPI";
+                    openURL.openURL(URL);
+                  }
+                 
+                if (tobj.getSymbolID()== 11){
+                    //Cancion Thinking Out Loud - Ed Sheeran
+                    URL ="https://www.youtube.com/watch?v=lp-EO5I60KA";
+                    openURL.openURL(URL);
+                  }
+                
 	}
 
 	public void updateTuioObject(TuioObject tobj) {
 		System.out.println("set obj "+tobj.getSymbolID()+" ("+tobj.getSessionID()+") "+tobj.getX()+" "+tobj.getY()+" "+tobj.getAngle()+" "+tobj.getMotionSpeed()+" "+tobj.getRotationSpeed()+" "+tobj.getMotionAccel()+" "+tobj.getRotationAccel());
-	}
+                
+        }
 	
 	public void removeTuioObject(TuioObject tobj) {
 		System.out.println("del obj "+tobj.getSymbolID()+" ("+tobj.getSessionID()+")");	
@@ -75,7 +156,7 @@ public class TuioDump implements TuioListener {
 			catch (Exception e) { System.out.println("usage: java TuioDump [port]"); }
 		} else if (argv.length>1) System.out.println("usage: java TuioDump [port]");
 
-		TuioDump dump = new TuioDump();
+		Dodecaedro dump = new Dodecaedro();
 		TuioClient client = new TuioClient(port);
 
 		System.out.println("listening to TUIO messages at port "+port);
